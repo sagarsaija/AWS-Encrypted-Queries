@@ -31,3 +31,5 @@ make to compile
 UDF:
 make udf to compile and setup UDF code
 Go through server setup to ensure updated function created and loaded into MySQL database
+Keys:# AWS-Encrypted-Queries
+Aggregate Sum MYSQL
