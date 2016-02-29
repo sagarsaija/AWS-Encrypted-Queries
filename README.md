@@ -20,6 +20,10 @@ Install GMP and paillier library if not done beforehand.
 Paillier: acsc.cs.utexas.edu/libpaillier/
 GMP: https://gmplib.org/
 Change connection IP to server public IP in queries.c.
+
+Compile and install on the server side, I ran the command "gcc -I /usr/local/mysql/bin/mysql -I/usr/local $(mysql_config --cflags) -shared -fPIC -o  SUM_HE.so SUM_HE.c paillier.c -lgmp
+AND $ sudo cp SUM_HE.so /usr/lib/mysql/plugin/" and inside mysql, we ran" CREATE AGGREGATE FUNCTION SUM_HE RETURNS STRING SONAME "SUM_HE.so";
+
 Compile and run client:
 make
 ./client
